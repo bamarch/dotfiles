@@ -201,10 +201,52 @@ export DISPLAY=":0.0"
  
  alias cd=cd_func
 
-alias ssh='ssh -XY'
 
+export SCM3DIR=/home/bmarch/ws/scm3
+source /media/network/departmental/support/equities/Aliases/ubalias
+source /media/network/departmental/support/fx/bash_client_aliases
+source /media/network/departmental/support/fx/bash_ldn1_aliases
+
+alias jb='ssh support@10.3.19.180'
+
+alias madsys='ssh flexsys@10.2.74.140'
+alias madapp='ssh flexapp@10.2.74.140'
+alias madhub='ssh flexhub@10.2.74.140'
+
+alias bayern.t.s='ssh flexsys@10.2.74.217'
+alias bayern.t.a='ssh flexapp@10.2.74.217'
+alias bayern.t.h='ssh flexhub@10.2.74.217'
+
+alias dzcs.t.s='ssh sellside@10.2.74.186'
+alias dzcs.t.a='ssh appside@10.2.74.186'
+alias dzcs.t.m='ssh maxxsys@10.2.74.186'
+alias dzcs.t.h='ssh flexhub@10.2.74.186'
+
+alias dzms.t.s='ssh sellside@10.2.74.132'
+alias dzms.t.a='ssh appside@10.2.74.132'
+alias dzms.t.m='ssh maxxsys@10.2.74.132'
+
+alias fx.t.s='ssh sellside@10.2.74.179'
+alias fx.t.a='ssh appside@10.2.74.179'
+alias fx.t.m='ssh maxxsys@10.2.74.179'
+
+alias ws='cd ~/ws'
+alias scm1='cd ~/ws'
+alias scm3='cd ~/ws/scm3'
+alias link='cd ~/ws/scm3/flexlink'
+alias app='cd ~/ws/bsma-app'
+alias sys='cd ~/ws/bsma-sys'
+alias hub='cd ~/ws/bsma-hub'
 alias se='source ~/.bashrc'
+
+
+alias tests='cd /home/bmarch/ws/gitlab/fx-qa/cedrus/tests'
+
+
+source $HOME/ws/bootstrap/envs/bootstrap.envs
+export COLOUR=35
 
 alias tmuxa='tmux attach -t'
 alias tmuxn='tmux new -s'
+alias ssh='TERM=screen ssh -XY'
 

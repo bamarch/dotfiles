@@ -25,6 +25,8 @@ Plugin 'Buffergator'
 " Install tmux navigator
 Bundle 'christoomey/vim-tmux-navigator'
 
+" Obesssion
+Bundle 'tpope/vim-obsession'
 
 
 " Now we can turn our filetype functionality back on
