@@ -1,3 +1,4 @@
+" Enter the new millenium
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
@@ -44,7 +45,9 @@ set shiftwidth=4
 set backspace=indent,eol,start
 
 " Switch syntax highlighting on
-syntax on
+if !exists("g:syntax_on")
+    syntax enable
+endif
 
 " Show line numbers
 set number
@@ -52,13 +55,63 @@ set number
 " Allow hidden buffers, don't limit to 1 file per window/split
 set hidden
 
-" http://www.guckes.net/vim/setup.html
-set ai digraph ek    ru sc vb wmnu   noeb noet nosol
-set bs=2 fo=cqrt ls=2 shm=at tw=72 ww=<,>,h,l 
+" Enable for-instance ä (a, ctrl+h, :)
+set  digraph 
+
+" Enable recognition of arrow key codes starting with ESC
+set esckeys
+
+" Show ruler for the cursor i.e. line + col
+set ruler
+
+" Show the input of an incomplete command / autocomplete
+set showcmd
+
+" Visual bell, not beeping
+set visualbell
+
+" No bells
+set noerrorbells
+
+" Dont expand tabs to spaces
+set noexpandtab
+
+" Keep col position of cursor when moving through lines
+set nostartofline
+
+" Insert indentation from current line when starting new one
+set autoindent
+
+" Use intelligent indentation for C++
+set smartindent
+
+" Backspace with this value allows to use the backspace character (aka CTRL-H or "<-") to use for moving the cursor over automatically inserted indentation and over the start/end of line.
+set backspace=2
+
+" This allows to add text to a comment and still be within the comment after you start a new line. It also allows to break the line within a comment without breaking the comment.
+set formatoptions=cqrt
+
+" This makes Vim show a status line even when only one window is shown.
+set laststatus=2
+
+" This shortens about every message to a minimum and thus avoids scrolling within the output of messages and the "press a key" prompt that goes with these.
+set shortmess=at
+
+" This explicitly sets the width of text to 72 characters.
+set textwidth=72
+
+" Which commands will "wrap" the cursor around the line borders. Cursor left/right keys as well as the 'h' and 'l' command.
+set whichwrap=<,>,h,l
+
+" Teach vim about comments
 set comments=b:#,:%,n:>
+
 " Highlight tabs and whitespace
 " set list listchars=tab:»·,trail:·
+
+" Store infomation between sessions
 set viminfo=%,'50,\"100,:100,n~/.viminfo
+
 
 " Set paste mode when pasting into insert
 function! WrapForTmux(s)
@@ -83,3 +136,44 @@ endfunction
 
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 " End auto paste setting code
+
+
+" Highlight matching braces
+set showmatch
+
+" Highlighting on/clear
+set hlsearch
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" Set scrolling to not quite top of screen
+set scrolloff=3
+
+" Allow a load of tabpages
+set tabpagemax=100
+
+" Re-indent file
+map <F7> mzgg=G`z
+
+" c++ highlighting for .form files
+au BufRead,BufNewFile *.form setfiletype cpp
+
+
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
+
+" - Hit tab to :find by partial match
+" - Use * to make it fuzzy
+" - :b lets you autocomplete any open buffer
+
+" TAG JUMPING:
+
+" Create the `tags` file (may need to install ctags first)
+command! MakeTags !ctags -R .
+
+" - Use ^] to jump to tag under cursor
+" - Use g^] for ambiguous tags
+" - Use ^t to jump back up the tag stack
