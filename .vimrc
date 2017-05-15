@@ -2,20 +2,27 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" VUNDLE
+" VUNDLE:
+"     Setup
+"        -git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"        -Launch vim and run :PluginInstall
+"        -To install from command line: vim +PluginInstall +qall
 
-"We also want to turn off the default "filetype" controls for now because the way that vim caches filetype rules at runtime interferes with the way that vundle alters the runtime environment.
+"Turn off the default "filetype" controls temporarily because the way that vim caches filetype rules at runtime interferes with the way that vundle alters the runtime environment.
 filetype off
-" Next, we'll need to then adjust vim's runtime path to include the vundle location we cloned from GitHub. After that, we will call the vundle initialization function
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-" This is the Vundle package, which can be found on GitHub.
+
+" adjust vim's runtime path to include the vundle location and call the vundle initialization function
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
 " For GitHub repos, you specify plugins using the
 " 'user/repository' format
-Plugin 'gmarik/vundle'
 
-" We could also add repositories with a ".git" extension
+" Could also repositories with a ".git" extension, like nerdtree
 Plugin 'scrooloose/nerdtree.git'
 
 " To get plugins from Vim Scripts, you can reference the plugin
@@ -29,10 +36,11 @@ Bundle 'christoomey/vim-tmux-navigator'
 " Obesssion
 Bundle 'tpope/vim-obsession'
 
-
-" Now we can turn our filetype functionality back on
+" All vundle Plugins must be added before the following line
+call vundle#end()            " required
 " Enable file type detection and do language-dependent indenting.
-filetype plugin indent on
+filetype plugin indent on    " required
+
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
