@@ -2,12 +2,22 @@
 " :NT 			alias for NERDTree plugin
 " :e			explore! old fashioned way
 " :find			find path/to/file.py
+" :Vex			split window vertical + explore mode
 
 " PANESPLITTING:
-" :Vex			split window vertical + explore mode
 " Ctrl+w,Ctrl+v split pane vertically
 " Ctrl+w,Ctrl+s split pane horizontally
 " Ctrl+w,arrow	focus new pane
+
+" PANERESIZE: 
+" Ctrl+w,+      increase by one row (split)
+" Ctrl+w,-		decrease by one row (split)
+" Ctrl+w,>		increase by one col (vplit)
+" Ctrl+w,<		decrease by one col (vsplit)
+" Use prefixes [e.g.  Ctrl+w,10,+ increases the window size by 10 lines]
+" Ctrl+w,= 		resize all windows to equal dimensions
+" Ctrl+w,_		increase to max height
+" Ctrl+w,|		increase to max width
 
 " CHANGEINWORD:
 " ciw			replace text within word boundary
