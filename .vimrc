@@ -1,3 +1,40 @@
+" FILEEXPLORE:
+" :NT 			alias for NERDTree plugin
+" :e			explore! old fashioned way
+" :find			find path/to/file.py
+
+" PANESPLITTING:
+" :Vex			split window vertical + explore mode
+" Ctrl+w,Ctrl+v split pane vertically
+" Ctrl+w,Ctrl+s split pane horizontally
+" Ctrl+w,arrow	focus new pane
+
+" CHANGEINWORD:
+" ciw			replace text within word boundary
+" ci"			within ""
+" ci(			within ()
+" ci{			within {}
+
+" TAG JUMPING:
+" :MakeTags		create tags file (defined later)
+" Ctrl+]	 	to jump to tag under cursor
+" g,Ctrl+] 		for ambiguous tags
+" Ctrl+t to 	jump back up the tag stack
+
+" SESSIONS:
+" :Obsess		store session
+" vim -s		restore session
+
+" AUTOCOMPLETE:
+" Ctrl+x,Ctrl+[ autocomplete using tags
+" Ctrl+n		search next infile
+" Ctrl+p		search prev infile
+
+" FUZZYFIND:
+" :find *foo.py 
+" tab to expand 
+" :b lets you autocomplete any open buffer
+
 " Enter the new millenium
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -185,3 +222,6 @@ command! MakeTags !ctags -R .
 " - Use ^] to jump to tag under cursor
 " - Use g^] for ambiguous tags
 " - Use ^t to jump back up the tag stack
+
+" NERDTREE:
+command NT NERDTree
