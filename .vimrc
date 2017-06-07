@@ -153,7 +153,7 @@ set laststatus=2
 set shortmess=at
 
 " This explicitly sets the width of text to 72 characters.
-set textwidth=72
+"set textwidth=72
 
 " Which commands will "wrap" the cursor around the line borders. Cursor left/right keys as well as the 'h' and 'l' command.
 set whichwrap=<,>,h,l
