@@ -242,3 +242,12 @@ command NT NERDTree
 
 " C++ IDE
 command! Run !g++ %; ./a.out
+
+" Give me closing braces!
+inoremap { {<CR><BS>}<Esc>ko
+
+" Be clever with tabs...? 
+set smarttab
+
+" Gimme that other bracket
+inoremap ( ()<ESC>ha
