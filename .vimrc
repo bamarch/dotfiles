@@ -239,3 +239,6 @@ command! MakeTags !ctags -R .
 
 " NERDTREE:
 command NT NERDTree
+
+" C++ IDE
+command! Run !g++ %; ./a.out
