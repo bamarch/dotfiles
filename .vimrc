@@ -1,3 +1,7 @@
+" First time?
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" vim +PluginInstall +qall
+
 " FILEEXPLORE:
 " :NT 			alias for NERDTree plugin
 " :e			explore! old fashioned way
@@ -129,7 +133,7 @@ set visualbell
 set noerrorbells
 
 " Dont expand tabs to spaces
-set noexpandtab
+" set noexpandtab
 
 " Keep col position of cursor when moving through lines
 set nostartofline
