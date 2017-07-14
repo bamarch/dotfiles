@@ -201,7 +201,6 @@ export DISPLAY=":0.0"
  
  alias cd=cd_func
 
-alias ssh='ssh -XY'
 alias ws='cd ~/ws'
 alias se='source ~/.bashrc'
 
@@ -229,3 +228,7 @@ else \
   # @2 - Prompt when not in GIT repo
   echo " '$Yellow$PathShort$Color_Off'\$ "; \
 fi)'
+
+alias tmuxa='tmux attach -t'
+alias tmuxn='tmux new -s'
+alias ssh='TERM=screen ssh -XY'
