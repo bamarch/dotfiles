@@ -80,6 +80,9 @@ Plugin 'scrooloose/nerdtree.git'
 " by name as it appears on the site
 Plugin 'Buffergator'
 
+" Language specifc styling
+" https://github.com/editorconfig/editorconfig-vim#readme
+Plugin 'editorconfig/editorconfig-vim'
 
 " Install tmux navigator
 Bundle 'christoomey/vim-tmux-navigator'
@@ -129,6 +132,15 @@ set showcmd
 " Visual bell, not beeping
 set visualbell
 
+" Insert indentation from current line when starting new one
+set autoindent
+
+" Use intelligent indentation for C++
+set smartindent
+
+" Smart tab yo
+set smarttab
+
 " No bells
 set noerrorbells
 
@@ -137,12 +149,6 @@ set noerrorbells
 
 " Keep col position of cursor when moving through lines
 set nostartofline
-
-" Insert indentation from current line when starting new one
-set autoindent
-
-" Use intelligent indentation for C++
-set smartindent
 
 " Backspace with this value allows to use the backspace character (aka CTRL-H or "<-") to use for moving the cursor over automatically inserted indentation and over the start/end of line.
 set backspace=2
@@ -244,10 +250,28 @@ command NT NERDTree
 command! Run !g++ %; ./a.out
 
 " Give me closing braces!
-inoremap { {<CR><BS>}<Esc>ko
+"
+" Whenever you type { then enter, auto format a block
+ inoremap {<CR> {<CR><BS>}<Esc>ko
 
-" Be clever with tabs...? 
-set smarttab
+" Make it so that a curly brace automatically inserts an indented line
+" inoremap {<CR> {<CR>}<Esc>O<BS><Tab>
 
-" Gimme that other bracket
-inoremap ( ()<ESC>ha
+" Ctrl + return, use after brace
+" inoremap <C-Return> <CR><CR><C-o>k<Tab>
+
+" Ctrl + Return between braces for win times
+"imap <C-Return> <CR><CR><C-o>k<S-s>
+
+" Gimme that other bracket whenever I bracket
+" inoremap ( ()<ESC>ha
+
+" Node run!
+command! Node !node %
+
+"No More Arrow Keys!
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
