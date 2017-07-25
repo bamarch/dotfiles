@@ -280,3 +280,27 @@ let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
+
+" Use the below highlight group when displaying bad whitespace is desired.
+highlight BadWhitespace ctermbg=red guibg=red
+
+" Display tabs at the beginning of a line in Python mode as bad.
+au BufRead,BufNewFile *.py,*.pyw match BadWhitespace /^\t\+/
+" Make trailing whitespace be flagged as bad.
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
+" Use UNIX (\n) line endings.
+" Only used for new files so as to not force existing files to change their
+" line endings.
+" Python: yes
+" C: yes
+au BufNewFile *.py,*.pyw,*.c,*.h set fileformat=unix
+
+" For full syntax highlighting:
+let python_highlight_all=1
+syntax on
+
+" Identify too-long columns
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
+
