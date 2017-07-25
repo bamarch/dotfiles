@@ -13,7 +13,7 @@
 " Ctrl+w,Ctrl+s split pane horizontally
 " Ctrl+w,arrow	focus new pane
 
-" PANERESIZE: 
+" PANERESIZE:
 " Ctrl+w,+      increase by one row (split)
 " Ctrl+w,-		decrease by one row (split)
 " Ctrl+w,>		increase by one col (vplit)
@@ -45,8 +45,8 @@
 " Ctrl+p		search prev infile
 
 " FUZZYFIND:
-" :find *foo.py 
-" tab to expand 
+" :find *foo.py
+" tab to expand
 " :b lets you autocomplete any open buffer
 
 " Enter the new millenium
@@ -118,7 +118,7 @@ set number
 set hidden
 
 " Enable for-instance ä (a, ctrl+h, :)
-set  digraph 
+set  digraph
 
 " Enable recognition of arrow key codes starting with ESC
 set esckeys
@@ -275,3 +275,8 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
+" Block cursor
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
