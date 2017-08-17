@@ -177,6 +177,9 @@ set comments=b:#,:%,n:>
 " Store infomation between sessions
 set viminfo=%,'50,\"100,:100,n~/.viminfo
 
+" remap increment and decrement to use alt (avoid tmux clash)
+:nnoremap <A-a> <C-a>
+:nnoremap <A-x> <C-x>
 
 " Set paste mode when pasting into insert
 function! WrapForTmux(s)
