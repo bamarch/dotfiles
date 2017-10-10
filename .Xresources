@@ -1,0 +1,41 @@
+!Having used gnome-terminal for a long time, I was somewhat loathe to part with the colors and behaviors Id come to love. So here is my .Xdefaults file, with notes about what the various bits do:
+URxvt*background: #2B2B2B
+URxvt*foreground: #DEDEDE
+URxvt*font: xft:Monospace:pixelsize=14
+URxvt*boldFont: xft:Monospace:bold:pixelsize=14
+!Needed so underscores dont appear as spaces with pixelsize 14
+URxvt.lineSpace: 1
+URxvt*saveLines: 12000
+URxvt*scrollBar: false
+URxvt*scrollstyle: rxvt
+!These parts are all fairly self-explanatory; rxvt-unicode supports anti-aliased fonts, which means bold text looks good (one of the primary reasons I couldnt stand xterm, since bold fonts tend to bleed into each other without anti-aliasing).
+URxvt*perl-ext-common: default,matcher
+URxvt*urlLauncher: /usr/bin/google-chrome-stable
+URxvt*matcher.button: 1
+URxvt*colorUL: #86a2be
+!These lines implement clickable URLs inside your terminal. The launcher doesnt give any visual cue in your cursor when a link is clickable, but I find the underlining and change in color to be enough change.
+! black
+URxvt*color0  : #2E3436
+URxvt*color8  : #555753
+! red
+URxvt*color1  : #CC0000
+URxvt*color9  : #EF2929
+! green
+URxvt*color2  : #4E9A06
+URxvt*color10 : #8AE234
+! yellow
+URxvt*color3  : #C4A000
+URxvt*color11 : #FCE94F
+! blue
+URxvt*color4  : #3465A4
+URxvt*color12 : #729FCF
+! magenta
+URxvt*color5  : #75507B
+URxvt*color13 : #AD7FA8
+! cyan
+URxvt*color6  : #06989A
+URxvt*color14 : #34E2E2
+! white
+URxvt*color7  : #D3D7CF
+URxvt*color15 : #EEEEEC
+!I absolutely adore gnome-terminals color scheme, which is a bit more subdued than the rxvt default. So in it goes. The first color is "normal"; the second color is "bright."
