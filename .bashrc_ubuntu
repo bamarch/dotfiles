@@ -157,10 +157,3 @@ else \
   echo " '$Yellow$PathShort$Color_Off'\$ "; \
 fi)'
 
-# sync clipboards
-ps cax | grep autocutsel > /dev/null
-if [ $? -ne 0 ]; then
-	 autocutsel -fork &
-	 autocutsel -selection PRIMARY -fork &
-fi
-
