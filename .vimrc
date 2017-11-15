@@ -309,3 +309,9 @@ call matchadd('ColorColumn', '\%81v', 100)
 
 " Remove trailing whitespace on F5
 :nnoremap <silent> <F5> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
+" Modify the highlight colours for search
+hi Search cterm=NONE ctermfg=black ctermbg=grey
+
+" Format JSON nicely with '=j'
+nmap =j :%!python -m json.tool<CR>
