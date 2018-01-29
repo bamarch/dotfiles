@@ -11,3 +11,12 @@ alias vsta='vagrant status'
 alias vssh='vagrant ssh-config'
 alias mdkir='mkdir'
 alias sane='stty sane'
+alias fix_tty='sudo kbd_mode -s'
+alias sshvag='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.vagrant.d/insecure_private_key'
+alias scpvag='scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -i ~/.vagrant.d/insecure_private_key'
+alias lookfor='echo "FIXME"; echo "TODO"; echo "WORKAROUND"'
+alias chklist='cd ~/Documents/checklists; ls -l'
+#true clear current buffer
+#use in combo with ctrl + k to clear tmux scrollback
+alias cls='printf "\033c"'
+alias kbd_delay='gsettings set org.gnome.desktop.peripherals.keyboard delay 220'
