@@ -157,3 +157,10 @@ else \
   echo " '$Yellow$PathShort$Color_Off'\$ "; \
 fi)'
 
+# add my custom stuff
+if [ -d "$HOME/bin" ] ; then
+  PATH="$PATH:$HOME/bin"
+fi
+
+#Vagrant
+#export VAGRANT_CWD=~/repos/vagrant
