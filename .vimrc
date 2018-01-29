@@ -90,6 +90,9 @@ Bundle 'christoomey/vim-tmux-navigator'
 " Obesssion
 Bundle 'tpope/vim-obsession'
 
+" vim todo
+Bundle 'aserebryakov/vim-todo-lists'
+
 " All vundle Plugins must be added before the following line
 call vundle#end()            " required
 " Enable file type detection and do language-dependent indenting.
