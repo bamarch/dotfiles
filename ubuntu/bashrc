@@ -157,10 +157,11 @@ else \
   echo " '$Yellow$PathShort$Color_Off'\$ "; \
 fi)'
 
-# add my custom stuff
+# add my custom stuff - also there is .local/bin now...
 if [ -d "$HOME/bin" ] ; then
   PATH="$PATH:$HOME/bin"
 fi
 
-#Vagrant
-#export VAGRANT_CWD=~/repos/vagrant
+export VAGRANT_CWD='~/repos/vagrant'
+export ANSIBLE_DIR='/Users/BenMarch/google-drive/ws/ansible'
+export ANSIBLE_CONFIG='$ANSIBLE_DIR/ansible.cfg'
