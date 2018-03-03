@@ -142,7 +142,7 @@ IRed="\[\033[0;91m\]"         # Red
 BYellow="\[\033[1;33m\]"      # Yellow
 Yellow="\[\033[0;33m\]"       # Yellow
 PathShort="\w"
-export PS1=$IBlack$Time12h$Color_Off'$(git branch &>/dev/null;\
+export PS1="$USER@`hostname`"'$(git branch &>/dev/null;\
 if [ $? -eq 0 ]; then \
   echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
   if [ "$?" -eq "0" ]; then \
