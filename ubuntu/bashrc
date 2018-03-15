@@ -166,7 +166,7 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 export VAGRANT_CWD='~/repos/vagrant'
-export ANSIBLE_DIR='/Users/BenMarch/google-drive/ws/ansible'
+export ANSIBLE_DIR="$HOME/repos/ansible"
 export ANSIBLE_CONFIG='$ANSIBLE_DIR/ansible.cfg'
 
 # tmux login
