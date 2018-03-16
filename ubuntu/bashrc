@@ -165,9 +165,13 @@ if [ -d "$HOME/bin" ] ; then
   PATH="$PATH:$HOME/bin"
 fi
 
-export VAGRANT_CWD='~/repos/vagrant'
-export ANSIBLE_DIR="$HOME/repos/ansible"
-export ANSIBLE_CONFIG='$ANSIBLE_DIR/ansible.cfg'
+if [ -d "$HOME/repos/vagrant" ] ; then
+  export VAGRANT_CWD="$HOME/repos/vagrant"
+fi
+if [ -d "$HOME/repos/ansible" ] ; then
+  export ANSIBLE_DIR="$HOME/repos/ansible"
+  export ANSIBLE_CONFIG='$ANSIBLE_DIR/ansible.cfg'
+fi
 
 # tmux login
 if [ -z "$TMUX" ]; then
