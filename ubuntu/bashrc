@@ -173,6 +173,10 @@ if [ -d "$HOME/repos/ansible" ] ; then
   export ANSIBLE_CONFIG='$ANSIBLE_DIR/ansible.cfg'
 fi
 
+# gimme vim
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # tmux login
 if [ -z "$TMUX" ]; then
     base_session='main'
